@@ -4,7 +4,7 @@ type myBool = true | false
 type WindowStates = 'open' | 'closed' | 'minimized'
 
 // const window: WindowStates = 'asd'//we can't
-const window: WindowStates = 'open'//or closed or minimized
+const oneWindow: WindowStates = 'open'//or closed or minimized
 
 //Generics
 
@@ -18,7 +18,7 @@ interface Backpack<T> {
     get: () => T
 }
 
-declare const backpack: Backpack<string>;
+const backpack: Backpack<string>;
 backpack.add('simple_object')
 const object = backpack.get()//now object is a string.
 console.log('object', object)
