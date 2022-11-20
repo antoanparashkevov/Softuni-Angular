@@ -24,4 +24,12 @@ export class ProductsListComponent {
     this.title = 'Title was changed successfully :)'
   }
 
+  catchInsertedText(ev: any) {
+    this.inputValue = ev.target.value
+  }
+
+  takeValue() {
+    console.log('Inserted Value >>> ', this.inputValue)
+  }
+
 }
