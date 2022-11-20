@@ -10,7 +10,7 @@ export class ProductsListComponent implements OnInit{
   title: string = 'Welcome to product-list component'
   inputValue: string | undefined = 'typeSomething'
   changeTitle: boolean | undefined = true
-  showTitle = false;
+  showTitle = true;
   @ViewChild('testRef', {static: true}) testRefValue!: ElementRef
   elements = [
     {
@@ -51,5 +51,10 @@ export class ProductsListComponent implements OnInit{
 
   ngOnInit() {
     console.log('Local Template Reference >>> ',this.testRefValue.nativeElement)
+  }
+
+  onTakeNewTitle(inputData: { name: string } ) {
+    console.log('inputData', inputData)
+    this.title = inputData.name
   }
 }
