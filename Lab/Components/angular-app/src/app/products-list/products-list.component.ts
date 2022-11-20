@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {EventType} from "@angular/router";
 
 @Component({
@@ -6,11 +6,12 @@ import {EventType} from "@angular/router";
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.css']
 })
-export class ProductsListComponent {
+export class ProductsListComponent implements OnInit{
   title: string = 'Welcome to product-list component'
   inputValue: string | undefined = 'typeSomething'
   changeTitle: boolean | undefined = true
   showTitle = false;
+  @ViewChild('testRef', {static: true}) testRefValue!: ElementRef
   elements = [
     {
       name: 'John',
@@ -38,13 +39,17 @@ export class ProductsListComponent {
     this.title = 'Title was changed successfully :)'
   }
 
-  catchInsertedText(ev: any) {
-    console.log('DOM event Object', ev)
-    this.inputValue = ev.target.value
-  }
+  //when I used keyup Event Listener for Event Binding demonstration
+  // catchInsertedText(ev: any) {
+  //   console.log('DOM event Object', ev)
+  //   this.inputValue = ev.target.value
+  // }
 
   takeValue() {
     console.log('Inserted Value >>> ', this.inputValue)
   }
 
+  ngOnInit() {
+    console.log('Local Template Reference >>> ',this.testRefValue.nativeElement)
+  }
 }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-product-item',
@@ -10,7 +10,5 @@ export class ProductItemComponent {
   @Input() i!: number;
   @Input() customProperty!: string;
 
-  constructor() {
-  }
 
 }

@@ -3,7 +3,7 @@
 <button (click)="clickChangeTitle($event)" style="width: 250px">Change Title</button>
 <hr>
 <!--<input type="text" [attr.value]="inputValue" (input)="catchInsertedText($event)">-->
-<input type="text" [(ngModel)]="inputValue">
+<input type="text" [(ngModel)]="inputValue" #testRef>
 <button (click)="takeValue()">InsertedValue</button>
 <ul>
   <li *ngFor="let obj of elements; let i = index;">
