@@ -8,7 +8,7 @@ import {EventType} from "@angular/router";
 })
 export class ProductsListComponent {
   title: string = 'Welcome to product-list component'
-
+  inputValue: string | undefined = 'typeSomething'
   changeTitle: boolean | undefined = true
 
   constructor() {
@@ -20,6 +20,8 @@ export class ProductsListComponent {
 
   clickChangeTitle(ev: MouseEvent) {
     console.log(ev)
+    console.log(this.inputValue)
+    this.title = 'Title was changed successfully :)'
   }
 
 }

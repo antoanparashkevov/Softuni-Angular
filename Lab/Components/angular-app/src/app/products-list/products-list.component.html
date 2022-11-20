@@ -1,2 +1,4 @@
 <h1> {{title}} </h1>
-<button (click)="clickChangeTitle($event)">Change Title</button>
+<button (click)="clickChangeTitle($event)" style="width: 250px">Change Title</button>
+<hr>
+<input type="text" [attr.value]="inputValue">
