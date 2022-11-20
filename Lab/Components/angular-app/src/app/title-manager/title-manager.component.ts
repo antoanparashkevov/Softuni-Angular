@@ -7,7 +7,12 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class TitleManagerComponent {
   titleName: string = 'Initial Title';
+  serverStatus: string;
   @Output() newTitle = new EventEmitter<{ name: string }>()
+
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline'
+  }
 
   takeTitle() {
     this.newTitle.emit({

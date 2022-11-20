@@ -1,2 +1,4 @@
 <input type="text" [(ngModel)]="titleName">
 <button (click)="takeTitle()">Take title</button>
+<hr>
+<div [ngStyle]="{backgroundColor: serverStatus === 'online' ? 'green' : 'red'} ">{{serverStatus}}</div>
