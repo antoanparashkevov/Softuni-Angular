@@ -1,5 +1,6 @@
 <h1> {{title}} </h1>
 <button (click)="clickChangeTitle($event)" style="width: 250px">Change Title</button>
 <hr>
-<input type="text" [attr.value]="inputValue" (keyup)="catchInsertedText($event)">
+<!--<input type="text" [attr.value]="inputValue" (input)="catchInsertedText($event)">-->
+<input type="text" [(ngModel)]="inputValue">
 <button (click)="takeValue()">InsertedValue</button>

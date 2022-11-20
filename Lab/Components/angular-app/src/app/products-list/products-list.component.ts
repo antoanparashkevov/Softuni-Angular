@@ -25,6 +25,7 @@ export class ProductsListComponent {
   }
 
   catchInsertedText(ev: any) {
+    console.log('DOM event Object', ev)
     this.inputValue = ev.target.value
   }
 
