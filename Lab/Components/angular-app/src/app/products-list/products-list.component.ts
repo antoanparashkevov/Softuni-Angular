@@ -10,7 +10,21 @@ export class ProductsListComponent {
   title: string = 'Welcome to product-list component'
   inputValue: string | undefined = 'typeSomething'
   changeTitle: boolean | undefined = true
-
+  showTitle = false;
+  elements = [
+    {
+      name: 'John',
+      age: 18
+    },
+    {
+      name: 'Melissa',
+      age: 20
+    },
+    {
+      name: 'Mila',
+      age: 21
+    }
+  ]
   constructor() {
     if(this.changeTitle) {
       this.title = 'Welcome again, guest :)'
