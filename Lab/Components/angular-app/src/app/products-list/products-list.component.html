@@ -7,6 +7,6 @@
 <button (click)="takeValue()">InsertedValue</button>
 <ul>
   <li *ngFor="let obj of elements; let i = index;">
-    <app-product-item></app-product-item>
+    <app-product-item [obj]="obj" [i]="i" customProperty="test"></app-product-item>
   </li>
 </ul>
