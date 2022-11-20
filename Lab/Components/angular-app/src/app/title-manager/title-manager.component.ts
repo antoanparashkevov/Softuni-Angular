@@ -19,4 +19,8 @@ export class TitleManagerComponent {
       name: this.titleName
     })
   }
+
+  getColor(){
+    return this.serverStatus === 'online' ? 'green' : 'red'
+  }
 }
